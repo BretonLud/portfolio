@@ -8,7 +8,7 @@ class Mail {
         $email = $_POST["email"];
         $message = $_POST["message"];
         $objet = $_POST["objet"];
-        
+
         /*Si les champs prenom et mail ne sont pas vides et si les donnees ont
         *bien la forme attendue...*/
         if (!empty($name)
@@ -23,8 +23,7 @@ class Mail {
                 $to = "Bretonludovic40@gmail.com"; // Change this email to your //
                 $subject = "$objet:  $name";
                 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\n\nEmail: $email\n\nSubject: $objet\n\nMessage: $message";
-                $header = "From: $email";
-                $header .= "Reply-To: $email";	
+                $header = "From: $email";	
                 mail($to, $objet, $body, $header);         
             }
             catch(PDOException $e){
