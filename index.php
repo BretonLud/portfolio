@@ -10,8 +10,8 @@ if (isset($_POST['formcontact'])){
     $email = $_POST["email"];
     $message = $_POST["message"];
 	$objet = $_POST["objet"];
-    $contact = (new Contact())->newContact($name, $email, $message, $objet);
-	$mail = (new mail())->newMail($name, $email, $message, $objet);
+	$mail = (new Mail())->newMail($name, $email, $message, $objet);
+    $contact = (new Contact())->newContact($name, $email, $message, $objet);	
 }  
     
 ?>
@@ -30,7 +30,7 @@ if (isset($_POST['formcontact'])){
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>
 	<div class="identite reveal-3">
-		<img src="./css/images/id.png" class="img">
+		<img src="./css/images/id.png" class="img" alt="photo face">
 	</div>		
 </section>
 
@@ -43,11 +43,11 @@ if (isset($_POST['formcontact'])){
 			<p>Front-end</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/html.png">
-					<img class="logo_CSS" src="./css/images/js.png">
+					<img src="./css/images/html.png" alt="logo html">
+					<img class="logo_CSS" src="./css/images/js.png" alt="logo js">
 				</div>
 				<div>
-					<img src="./css/images/css3.png">
+					<img src="./css/images/css3.png" alt="logo css">
 				</div>
 			</div>
 		</div>
@@ -55,10 +55,10 @@ if (isset($_POST['formcontact'])){
 			<p>Back-end</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/php.png">
+					<img src="./css/images/php.png" alt="logo php">
 				</div>
 				<div>
-					<img src="./css/images/mysql.png">
+					<img src="./css/images/mysql.png" alt="logo mysql">
 				</div>
 			</div>
 		</div>
@@ -66,10 +66,10 @@ if (isset($_POST['formcontact'])){
 			<p>Logiciels</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/wordpress.png">
+					<img src="./css/images/wordpress.png" alt="logo wordpress">
 				</div>
 				<div>
-					<img src="./css/images/vsc.png">
+					<img src="./css/images/vsc.png" alt="logo visual studio code">
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@ if (isset($_POST['formcontact'])){
 		<h1>Mes projets</h1>
 		<div class="project">
 			<div class="box reveal-2">
-				<img src="./css/images/fricoot.png">
+				<img src="./css/images/fricoot.png" alt="image projet 1">
 				<p>
 					Développement au sein d'une équipe d'un questionnaire façon kahoot qui n'a pas abouti.
 				</p>
@@ -91,7 +91,7 @@ if (isset($_POST['formcontact'])){
 					
 			</div>
 			<div class="box reveal-2">
-				<img src="./css/images/portfolio.png">
+				<img src="./css/images/portfolio.png" alt="image projet 2">
 				<p>
 					Développement de mon portfolio afin de faire mes premiers pas dans les projets.
 				</p>
@@ -101,6 +101,7 @@ if (isset($_POST['formcontact'])){
 				<p>test</p>
 			</div>-->
 		</div>
+	</div>
 </section>
 <section>
 	<div id="modals"  class="modals">
@@ -114,12 +115,12 @@ if (isset($_POST['formcontact'])){
 					Le nom du titre sert ensuite au joueur à retrouver le questionnaire qui correspond.</p>
 				</div>
 				<div>
-					<img src="./css/images/fri_Questionnaire.png">
+					<img src="./css/images/fri_Questionnaire.png" alt="image questionnaire">
 				</div>
 			</div>				
 			<div class="first_Modal_Bot">
 				<div class="first_Modal_Div">
-					<img  src="./css/images/fri_Php.png">
+					<img  src="./css/images/fri_Php.png" alt="image php">
 				</div>
 				<div class="first_Modal_Button">
 					<input type="button" class="close" value="retour">
@@ -139,12 +140,12 @@ if (isset($_POST['formcontact'])){
 					</p>
 				</div>
 				<div>
-					<img src="./css/images/competence.png">
+					<img src="./css/images/competence.png" alt="image portfolio">
 				</div>
 			</div>				
 			<div class="first_Modal_Bot">
 				<div class="first_Modal_Div">
-					<img  src="./css/images/mailPHP.png">
+					<img  src="./css/images/mailPHP.png" alt="image php">
 				</div>
 				<div class="first_Modal_Button">
 					<input type="button" class="close" value="retour">
@@ -168,13 +169,13 @@ if (isset($_POST['formcontact'])){
 	<h1>Contact</h1>		
 		<form class="form" method="post" action="index.php">
 			<div>		
-				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern='^[A-Za-z \'-]+$' autocomplete>		
+				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern="^[A-Za-z \']+$">		
 			</div>
 			<div>
-				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' autocomplete>			
+				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$'>			
 			</div>
 			<div>
-				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' autocomplete>			
+				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$'>			
 			</div>
 			<div>
 				<textarea id="message" class="reveal-4" name="message" placeholder="Veuillez écrire ici votre message, 2000 caractères maximum" maxlength="2000" required></textarea>

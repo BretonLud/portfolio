@@ -37,8 +37,7 @@ class Contact {
                 $sth->bindParam(':email',$email);
                 $sth->bindParam(':message',$message);
                 $sth->bindParam(':objet', $objet);            
-                $sth->execute();
-                //On renvoie l'utilisateur vers la page de remerciement                
+                $sth->execute();               
             }
             catch(PDOException $e){
                 echo 'Erreur : '.$e->getMessage();

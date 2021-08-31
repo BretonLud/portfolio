@@ -16,14 +16,14 @@
     <nav>        
 		<div class="conteneur_nav">
             <div class="menu">
-                <label for="mobile" > <img class="logo_mobile" src="./css/images/logo2.png"></label>
+                <label for="mobile" > <img class="logo_mobile" src="./css/images/logo2.png" alt="logo"></label>
                 <input type="checkbox" id="mobile" role="button">
                 <ul>
 					<li> <a href="#presentation" class="lien">Présentation</a> </li>
 					<li> <a href="#skill" class="lien">Mes compétences</a> </li>
 					<li> <a href="#projects" class="lien">Mes projets</a> </li>
 					<li> <a href="#contact" class="lien">Contact</a> </li>
-                    <li> <a href="index.php" class="lien"><img class="logo" src="./css/images/logo2.png"></a></li>				
+                    <li> <a href="index.php" class="lien"><img class="logo" src="./css/images/logo2.png" alt="logo"></a></li>				
 				</ul>
             </div>
         </div>	
