@@ -1,0 +1,53 @@
+%shadow{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+%font_Ruda{
+    
+    font-family: Ruda;
+    font-style: normal;
+    font-weight: 900;
+}
+
+%font_OpenSans{
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+}
+
+%box {
+
+    width: 25%;
+    height: auto;
+    padding-top: 1em;
+    background: $last-Color;
+    border-radius: 5%;
+    margin-bottom: 2%;
+}
+
+%button{
+
+    width: 40%;
+    height: 2em;
+    background-color: $main-Color;
+    border: $secondary-Color solid 1px;
+    border-radius: 3em;
+    margin-bottom: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $last-Color;
+    box-shadow: 2px 5px $secondary-Color;
+    cursor: pointer;
+    
+}
+
+%modal{
+
+    background-color: $last-Color;
+    margin: 2% auto; /* 2% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}

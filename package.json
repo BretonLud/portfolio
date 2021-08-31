@@ -1,0 +1,48 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.15.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chokidar": "^3.5.2",
+    "webpack": "^5.45.1"
+  },
+  "devDependencies": {
+    "4": "0.0.0",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "expect": "^27.0.6",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "socket.io": "^4.1.3",
+    "style-loader": "^3.2.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev webpack --mode=development",
+    "build": "webpack  --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BretonLud/Fricoot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BretonLud/Fricoot/issues"
+  },
+  "homepage": "https://github.com/BretonLud/Fricoot#readme"
+}

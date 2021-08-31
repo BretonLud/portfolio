@@ -1,0 +1,70 @@
+.skills{
+    
+    background-color: $last-Color;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.skill{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill > div > p {
+    margin-top: 10%;
+    @extend %font_OpenSans;
+}
+
+.element{
+    
+    width: 30%;
+}
+
+.front{
+
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;  
+}
+
+.logo_Front-end{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_Front-end{
+
+    width: 96px;
+    height: auto;
+}
+
+.logo_CSS{
+
+    margin-top: 50%;
+}
+
+@media screen and (max-width: 768px){
+
+    .skills{
+        
+        background-color: $last-Color;
+        text-align: center;
+        padding-top: 10%;
+        padding-bottom: 15%;
+    }
+
+    .skill{
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .element{
+    
+        width: 100%;
+    }
+
+}

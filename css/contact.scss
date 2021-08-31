@@ -1,0 +1,89 @@
+.contact{
+    margin-top: 4%;
+    padding-top: 5%;
+    color: $last-Color;
+    text-align: center;
+}
+
+.form{
+    /* Uniquement centrer le formulaire sur la page */
+    /* Encadré pour voir les limites du formulaire */ 
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  .form div + div {
+    margin-top: 1em;
+  }
+  
+  .form textarea {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+    @extend %font_OpenSans;
+    text-align: center;
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 1em;
+  }
+  
+  .form input:focus, textarea:focus {
+    /* Pour souligner légèrement les éléments actifs */
+    border-color: $last-Color 3px;
+  }
+
+  .form .input{
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+       @extend %font_OpenSans;
+       text-align: center;
+       /* Pour que tous les champs texte aient la même dimension */
+       width: 20%;
+       height: 2em;
+       box-sizing: border-box;
+       border-radius: 1em;
+  }
+
+  .form textarea{
+    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+    vertical-align: top;
+  
+    /* Pour donner assez de place pour écrire du texte */
+    height: 10em;
+  }
+  
+  .form .button{
+      width: 20%;
+      margin-bottom: 0%;
+  }
+
+  .form .button:hover{
+    background-color: $secondary-Color;
+    border: $main-Color solid 3px;
+    color: $last-Color;
+    box-shadow: 2px 5px $last-Color;
+
+}
+
+@media screen and ( max-width : 768px) {
+
+  .form{
+    
+    width: 100% ; 
+  }
+
+  .form .button{
+
+    width: 40%;
+  }
+
+  .form .input{
+
+    width: 40%
+  }
+  
+  .form textarea{
+    width: 80%;
+  }
+}

@@ -1,0 +1,67 @@
+.projects{
+    margin-top: 4%;
+    padding-top: 5%;
+    color: $last-Color;
+    text-align: center;
+}
+
+.project{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    color: $secondary-Color;
+    @extend %box;
+    text-align: center;
+}
+
+.project > .box > img{
+    
+    width: 90%;
+    height: 50%;
+    border-radius: 5%;
+    border: $secondary-Color solid 1px;
+}
+
+.project > .box > p {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.button{
+    @extend %button;
+}
+
+.button:hover{
+    background-color: $last-Color;
+    border: $main-Color solid 3px;
+    color: $secondary-Color;
+    box-shadow: 2px 5px $main-Color;
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .project{
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .box{
+        
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .button{
+        margin-bottom: 20%;
+    }
+}
