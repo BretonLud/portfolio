@@ -19,20 +19,28 @@
 
   /* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
+    //on donne au button la font, une taille et le pointeur
+
+    @extend %font_OpenSans;
+    font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
 }
   
 .close:hover,
 .close:focus {
-color: #000;
-text-decoration: none;
-cursor: pointer;
+
+    // on change la couleur quand on passe sur le bouton
+
+    color: $secondary-Color;
+    background-color: $last-Color;
+    box-shadow: $main-Color 4px 4px;
 }
 
 .first_Modal_Top{
+
+    // on flex les premiers element de la modal et on les separe
+
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -40,10 +48,15 @@ cursor: pointer;
 
 .first_Modal_Top h2{
 
+    // on donne un écartement vis à vis du titre 
+
     line-height: 2em;
 }
 
 .first_Modal_Top img{
+
+    // on gere la premiere image 
+
     margin-top: 10%;
     margin-left: 2%;
     width: 100%;
@@ -51,14 +64,21 @@ cursor: pointer;
     border: $secondary-Color solid 1px;
 
 }
+ 
 
 .first_Modal_Top img:hover{
-    
+
+    // on permet de grossir l'image
+    max-width: 90%;
     transform: scale(1.5);
 }
 
 
+
+
 .first_Modal_Text p{
+
+    // on justify le texte et on lui donne des padding
 
     text-align: justify;
     padding-top: 5%;
@@ -68,10 +88,10 @@ cursor: pointer;
 
 
 .first_Modal_Bot{
-
+    // on fait la meme chose pour le bas
     display: flex;
     margin-top: 2%;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .first_Modal_Div{
@@ -90,17 +110,16 @@ cursor: pointer;
 }
 
 .first_Modal_Button{
-  
+    
     width: 30%;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
 }
 
 .first_Modal_Bot .close{
     @extend %button;
-    width: 80%;
-    margin-bottom: 5%;
+    width: 40%;
+    margin-bottom: 1%;
 }
 
 @media screen and (max-width: 768px) { 
@@ -113,6 +132,7 @@ cursor: pointer;
     .first_Modal_Top img{
 
         margin: auto;
+        margin-top: 17.5%;
     }
 
     .first_Modal_Bot{
@@ -124,7 +144,7 @@ cursor: pointer;
     .first_Modal_Div{
 
         width: 100%;
-        margin-top: 20%;
+        margin-top: 17.5%;
         
     }
 

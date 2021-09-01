@@ -13,10 +13,12 @@ class contact {
 // Vérification que ça soit pas vide et que ça respecte les données demandées. 
     function startempty(string $name, string $email, string $message){
         if (!empty($name)
-        && strlen($name) <= 20
+        && strlen($name) <= 50
+        && !empty($objet)
+        && strlen($objet) <= 100
+        && !empty($message)
         && !empty($email)
-        && filter_var($email, FILTER_VALIDATE_EMAIL)
-        && !empty($message));
+        && filter_var($email, FILTER_VALIDATE_EMAIL));
     }
 
 /*Si les champs prenom et mail ne sont pas vides et si les donnees ont

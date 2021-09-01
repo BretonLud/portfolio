@@ -19,10 +19,12 @@ class Contact {
         $message = valid_donnees($_POST["message"]);
         $objet = valid_donnees($_POST["objet"]);
 
-        /*Si les champs prenom et mail ne sont pas vides et si les donnees ont
-        *bien la forme attendue...*/
+        /*Si les champs prenom, mail, message et objet ne sont pas vides et si les donnees ont bien la forme attendue...*/
         if (!empty($name)
             && strlen($name) <= 50
+            && !empty($objet)
+            && strlen($objet) <= 100
+            && !empty($message)
             && !empty($email)
             && filter_var($email, FILTER_VALIDATE_EMAIL)){
         

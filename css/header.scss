@@ -1,4 +1,7 @@
 header{
+    /*Le header sera en haut et à gauche, avec une position sticky lui permettant de descendre.
+    Le z-index permet au header de rester au dessus des autres éléments*/
+
     position: sticky;
     width: auto;
     top: 0;
@@ -7,54 +10,73 @@ header{
     z-index: 10;
 }
 
+
+// Debut du menu
 nav{
 
+    //Le navigateur prendre toute la largeur de la page
     width: 100%;
     margin: 0 auto;
     background-color: white;
-    position: sticky;
-    top: 0px;
-    z-index: 10;
 }
 
 nav input[type=checkbox]{
+
+    //on desactive la checkbox
+
     display: none;
 }
 
 nav label{
+
+    //on desactive le label
+
     display: none;
 }
 
 
 
 a:visited{
+
+    // on donne une couleur au lien déjà visité
+
     color: $main-Color;
     @extend %shadow;
   }
 
 nav input[type=checkbox]:checked + ul, nav ul{
+
+    // on met le contenu de ul en ligne
+
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
 nav ul {
+    
+    //on desactive les puces
+
     list-style-type: none;
 }
 
 nav ul li{
+    
+    //on sépare, on centre et on donne une ombre aux éléments
     flex: 1 1 auto;
     text-align: center;
     @extend %shadow;
 }
 
 nav > div > ul > li > a{
-    color: $secondary-Color;
+
+    // on donne une couleur et on change le pointeur quand on passe sur les elements 
     cursor: pointer;
-    @extend %shadow;
 }
 
 .lien{
+
+    //on display les block pour leur mettre juste un petit padding et on enleve
 
     display: block;
     text-decoration: none;
@@ -64,95 +86,100 @@ nav > div > ul > li > a{
 
 
 nav a:hover{
-    color: $main-Color;
+
+    //rajout de l'ombre sur le texte
     text-shadow: 0px 4px 4px $main-Color;
 }
 
 .logo{
     
+    //on modifie la taille du logo
+
     width: 64px;
     height: 64px;
 }
 
 .logo_mobile{
+
+    // on désactive le logo_mobile
     display: none;
 }
+
+// fin du menu 
 
 @media screen and (max-width: 768px){
 
     nav{
-
-    display: flex;
-    justify-content: center;
+     // on modifie la couleur de font  
     background-color: $main-Color; 
-    
-
     }
 
     .conteneur_nav{
 
+        // on flex enfin de mettre le block au milieu de la page
         display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         
+    }
+
+    nav img{
+        // on met le logo au milieu
+        margin-left: auto;
+        margin-right: auto;
     }
 
     nav label{
-        display: block;
-        width: 100%;
-        text-align: center;
-        width: 100%;
-        
+        // on fait apparaitre notre label 
+
+        display: block;     
     }
 
     nav ul{
+
+        //on desactive ul enfin de ne le faire apparaitre seulement une fois le check fait
+
         display: none;
         position: absolute;
-        list-style-type: none;
-        width: 80%;
-        border: $last-Color solid 3px;     
+        width: 80%;     
         
     }
 
     nav input[type=checkbox]:checked + ul{
+
+        /*on flex ce qu'il y dans le ul et on met en colonne et
+        change les couleurs ainsi qu'un border radius sur les angles inférieur*/
+
         display: flex;
-        flex-flow : column wrap;
+        flex-direction: column;
         background-color: $last-Color;
         color: $main-Color;
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1em;
+    
     }
 
-    nav ul li{
-        flex: 1 1 auto;
-        text-align: center;       
-    }
-    
-    .lien{
-        display: block;
-        text-decoration: none;
-        padding: 10px 0px;
-    }
 
     nav .menu{
+        // on donne au menu la proportion de 80%
         width: 80%
     }
 
-    a:visited{
-        color: $main-Color;
-      }
-
     nav a:hover{
+        // on change la couleur quand le lien est survolé
+
         color: $secondary-Color;
         text-shadow: 0px 4px 4px $secondary-Color;
     }
     
     .logo{
+        //on desactive le logo desktop
+
         display: none;
     }
 
     .logo_mobile{
+
+        // on affiche le logo desktop on lui donne une taille et un border-radius bottom
 
         display: flex;
         width: 100px;
@@ -161,15 +188,4 @@ nav a:hover{
         border-bottom-right-radius: 1em;
         
     }
-
-    .menu{
-
-        color: $last-Color;
-    }
-
-    nav img{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
 }

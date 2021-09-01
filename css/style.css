@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/style.scss ***!
   \*********************************************************************************************************/
 @charset "UTF-8";
-a:visited, nav ul li, nav > div > ul > li > a {
+a:visited, nav ul li {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
 
 h2, h1 {
@@ -10,7 +10,7 @@ h2, h1 {
   font-style: normal;
   font-weight: 900; }
 
-header, .skill > div > p, .form textarea, .form .input, p, input {
+header, .skill > div > p, .form textarea, .form .input, .close, p, input {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal; }
@@ -47,6 +47,8 @@ header, .skill > div > p, .form textarea, .form .input, p, input {
   /* Could be more or less, depending on screen size */ }
 
 header {
+  /*Le header sera en haut et à gauche, avec une position sticky lui permettant de descendre.
+    Le z-index permet au header de rester au dessus des autres éléments*/
   position: sticky;
   width: auto;
   top: 0;
@@ -56,10 +58,7 @@ header {
 nav {
   width: 100%;
   margin: 0 auto;
-  background-color: white;
-  position: sticky;
-  top: 0px;
-  z-index: 10; }
+  background-color: white; }
 
 nav input[type=checkbox] {
   display: none; }
@@ -83,7 +82,6 @@ nav ul li {
   text-align: center; }
 
 nav > div > ul > li > a {
-  color: #000;
   cursor: pointer; }
 
 .lien {
@@ -92,7 +90,6 @@ nav > div > ul > li > a {
   padding: 10px 0px; }
 
 nav a:hover {
-  color: #0D1277;
   text-shadow: 0px 4px 4px #0D1277; }
 
 .logo {
@@ -104,43 +101,30 @@ nav a:hover {
 
 @media screen and (max-width: 768px) {
   nav {
-    display: flex;
-    justify-content: center;
     background-color: #0D1277; }
   .conteneur_nav {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center; }
+    justify-content: center; }
+  nav img {
+    margin-left: auto;
+    margin-right: auto; }
   nav label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    width: 100%; }
+    display: block; }
   nav ul {
     display: none;
     position: absolute;
-    list-style-type: none;
-    width: 80%;
-    border: #FFF solid 3px; }
+    width: 80%; }
   nav input[type=checkbox]:checked + ul {
+    /*on flex ce qu'il y dans le ul et on met en colonne et
+        change les couleurs ainsi qu'un border radius sur les angles inférieur*/
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     background-color: #FFF;
     color: #0D1277;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em; }
-  nav ul li {
-    flex: 1 1 auto;
-    text-align: center; }
-  .lien {
-    display: block;
-    text-decoration: none;
-    padding: 10px 0px; }
   nav .menu {
     width: 80%; }
-  a:visited {
-    color: #0D1277; }
   nav a:hover {
     color: #000;
     text-shadow: 0px 4px 4px #000; }
@@ -151,12 +135,7 @@ nav a:hover {
     width: 100px;
     height: 100px;
     border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em; }
-  .menu {
-    color: #FFF; }
-  nav img {
-    margin-left: auto;
-    margin-right: auto; } }
+    border-bottom-right-radius: 1em; } }
 
 .section_presentation {
   display: flex;
@@ -268,8 +247,7 @@ h1 {
     width: 100%; } }
 
 .contact {
-  margin-top: 4%;
-  padding-top: 5%;
+  margin-top: 10%;
   color: #FFF;
   text-align: center; }
 
@@ -309,8 +287,12 @@ h1 {
 .form textarea {
   /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
   vertical-align: top;
+  text-align: left;
   /* Pour donner assez de place pour écrire du texte */
-  height: 10em; }
+  height: 10em;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%; }
 
 .form .button {
   width: 20%;
@@ -397,16 +379,15 @@ h1 {
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold; }
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer; }
 
 .close:hover,
 .close:focus {
   color: #000;
-  text-decoration: none;
-  cursor: pointer; }
+  background-color: #FFF;
+  box-shadow: #0D1277 4px 4px; }
 
 .first_Modal_Top {
   display: flex;
@@ -424,6 +405,7 @@ h1 {
   border: #000 solid 1px; }
 
 .first_Modal_Top img:hover {
+  max-width: 90%;
   transform: scale(1.5); }
 
 .first_Modal_Text p {
@@ -435,7 +417,7 @@ h1 {
 .first_Modal_Bot {
   display: flex;
   margin-top: 2%;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .first_Modal_Div {
   width: 70%; }
@@ -451,24 +433,24 @@ h1 {
 .first_Modal_Button {
   width: 30%;
   display: flex;
-  justify-content: center;
   align-items: flex-end; }
 
 .first_Modal_Bot .close {
-  width: 80%;
-  margin-bottom: 5%; }
+  width: 40%;
+  margin-bottom: 1%; }
 
 @media screen and (max-width: 768px) {
   .first_Modal_Top {
     flex-direction: column; }
   .first_Modal_Top img {
-    margin: auto; }
+    margin: auto;
+    margin-top: 17.5%; }
   .first_Modal_Bot {
     flex-direction: column;
     justify-content: center; }
   .first_Modal_Div {
     width: 100%;
-    margin-top: 20%; }
+    margin-top: 17.5%; }
   .first_Modal_Button {
     width: 100%; }
   .first_Modal_Bot .close {

@@ -3,15 +3,15 @@
 require './mysql/contact.php';
 require './mysql/mail.php';
 
-
+// récupération des données pour envoyer le mail et enregistrer dans la base donnée.
 if (isset($_POST['formcontact'])){
 
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 	$objet = $_POST["objet"];
-	$mail = (new Mail())->newMail($name, $email, $message, $objet);
-    $contact = (new Contact())->newContact($name, $email, $message, $objet);	
+	$contact = (new Contact())->newContact($name, $email, $message, $objet);
+	$mail = (new Mail())->newMail($name, $email, $message, $objet);    	
 }  
     
 ?>
