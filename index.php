@@ -30,7 +30,7 @@ if (isset($_POST['formcontact'])){
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>
 	<div class="identite reveal-3">
-		<img src="./css/images/id.png" class="img" alt="photo face">
+		<img src="./css/images/id.webp" class="img" alt="photo face">
 	</div>		
 </section>
 
@@ -178,7 +178,7 @@ if (isset($_POST['formcontact'])){
 			<div class="error">
 			<?php
 			// affiche le message d'erreur
-			
+
 				if(isset($_GET['reg_err']))
 				{
 					$err = htmlspecialchars($_GET['reg_err']);
