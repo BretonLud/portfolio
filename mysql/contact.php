@@ -28,7 +28,7 @@ class Contact {
             && !empty($email)
             && filter_var($email, FILTER_VALIDATE_EMAIL)){
         
-            try{
+            
                 //On se connecte à la BDD
                 $dbh = (new Connexion())->conect();
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -40,10 +40,7 @@ class Contact {
                 $sth->bindParam(':message',$message);
                 $sth->bindParam(':objet', $objet);            
                 $sth->execute();               
-            }
-            catch(PDOException $e){
-                echo 'Erreur : '.$e->getMessage();
-            }
+            
         }
     }
 }

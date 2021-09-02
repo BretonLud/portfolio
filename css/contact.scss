@@ -10,58 +10,89 @@
     /* Encadré pour voir les limites du formulaire */ 
     text-align: center;
     margin-top: 2em;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
   
-  .form div + div {
-    //on sépare les div
-    margin-top: 1em;
-  }
-  
-  .form textarea {
-    /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
-    @extend %font_OpenSans;
-    text-align: center;
-    /* Pour que tous les champs texte aient la même dimension */
-    width: 50%;
-    height: auto;
-    box-sizing: border-box;
-    border-radius: 1em;
-  }
-  
-  .form input:focus, textarea:focus {
-    /* Pour souligner légèrement les éléments actifs */
-    border-color: $last-Color 3px;
-  }
+.form div + div {
+  //on sépare les div
+  margin-top: 1em;
+}
 
-  .form .input{
-    /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
-       @extend %font_OpenSans;
-       text-align: center;
-       /* Pour que tous les champs texte aient la même dimension */
-       width: 20%;
-       height: 2em;
-       box-sizing: border-box;
-       border-radius: 1em;
-  }
+.form textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+      Par défaut, les textarea ont une police monospace */
+  @extend %font_OpenSans;
+  text-align: center;
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 50%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 1em;
+}
 
-  .form textarea{
-    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
-    vertical-align: top;
-    text-align: left;
-    /* Pour donner assez de place pour écrire du texte */
-    height: 10em;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-  }
-  
-  .form .button{
-    // taille du button
+.form input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: $last-Color 3px;
+}
+
+.form .input{
+  /* Pour s'assurer que tous les champs texte ont la même police.
+      Par défaut, les textarea ont une police monospace */
+      @extend %font_OpenSans;
+      text-align: center;
+      /* Pour que tous les champs texte aient la même dimension */
       width: 20%;
-      margin-bottom: 0%;
-  }
+      height: 2em;
+      box-sizing: border-box;
+      border-radius: 1em;
+}
+
+.form textarea{
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+  text-align: left;
+  /* Pour donner assez de place pour écrire du texte */
+  height: 10em;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+}
+
+.form .button{
+  // taille du button
+    width: 20%;
+    margin-top: 0%;
+}
+
+.error{
+  // on centre le message d'erreur
+  display: flex;
+  justify-content: center;
+}
+
+.success {
+
+  // si le mail est envoyé la box apparait avec le message en vert
+
+  color: green;
+  width: 20%; 
+  background: $last-Color;
+  border-radius: 1em;
+  font-size: 1.5em;
+} 
+
+.err{
+
+  // si le mail n'est pas envoye la box apparait avec le message en rouge
+
+  color: red;
+  width: 20%; 
+  background: $last-Color;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
 
   .form .button:hover{
     // changement de la couleur et du shadow quand on passe la souris
@@ -71,6 +102,7 @@
     box-shadow: 2px 5px $last-Color;
 
 }
+
 
 @media screen and ( max-width : 768px) {
 

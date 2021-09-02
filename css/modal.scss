@@ -95,31 +95,36 @@
 }
 
 .first_Modal_Div{
+    //on défini la taille de la zone image 
+
     width: 70%;
 }
 
 .first_Modal_Bot img{
+    // on défini la taille de l'image et la transition quand on passe la souris dessus
 
     width: 100%;
     transition : transform .5s
 }
 
 .first_Modal_Bot img:hover {
+    //permet de grossir l'image et de la laisser dans le champs 
+
     margin-left: 10%;
     transform: scale(1.5)
 }
 
 .first_Modal_Button{
-    
+    //on place le bouton 
+
     width: 30%;
     display: flex;
     align-items: flex-end;
 }
 
 .first_Modal_Bot .close{
+    // on donne au bouton l'héritage %button
     @extend %button;
-    width: 40%;
-    margin-bottom: 1%;
 }
 
 @media screen and (max-width: 768px) { 
@@ -156,6 +161,5 @@
 
     .first_Modal_Bot .close{
         margin-top: 20%;
-        margin-bottom: 0%;
     }
 }

@@ -19,16 +19,18 @@ class Mail {
             && !empty($email)
             && filter_var($email, FILTER_VALIDATE_EMAIL)){
 
-            try{
+            
                 $to = "Bretonludovic40@gmail.com"; // Change this email to your //
                 $subject = "$objet:  $name";
                 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\n\nEmail: $email\n\nSubject: $objet\n\nMessage: $message";
                 $header = "From: $email";	
-                mail($to, $objet, $body, $header);         
-            }
-            catch(PDOException $e){
-                echo 'Erreur : '. $e->getMessage();
-            }
-        }
+                if(mail($to, $objet, $body, $header)){
+                    header('Location: index.php?reg_err=success');
+			        die();
+                }                   
+            } else {
+            header('Location: index.php?reg_err=fail');
+            die();
+        }    
     }
 }

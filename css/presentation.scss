@@ -1,13 +1,16 @@
 .section_presentation{
+    // on flex , on rajoute un padding et centre les éléments
+
     display: flex;
     justify-content: space-around;
-    padding-top: 4%;
-    padding-bottom: 5%;
+    padding-bottom: 2.5%;
+    padding-top: 2.5%;
     align-items: center;
 }
 
 
 .presentation{
+    // partie texte, on flex, on attribut une taille, on centre, on change la couleur et on met en colonne
     display: flex;
     width:50%;
     text-align: center;
@@ -16,18 +19,24 @@
 }
 
 h2 {   
+
+    // taille du texte, taille de l'interligne et utilisation de la font.
+
     font-size: 3em;
     line-height: 2em;
     @extend %font_Ruda;
 }
 
 h1{
+    // taille du texte, taille de l'interligne et utilisation de la font.
+
     font-size: 4em;
     line-height: 1.5em;
     @extend %font_Ruda;
 }
 
 .identite{
+    // partie photo, on attribut la taille de l'élément, on flex afin de mettre l'élément au centre.
     width: 50%;
     display: flex;
     align-items: center;
@@ -35,9 +44,14 @@ h1{
 }
 
 .img{
+
+    // on donne la taille a notre photo
+
     width: 60%;
-    height: auto;
 }
+
+
+// Partie pour faire apparaitre le texte via le js typed.js
 
 .hero .hero-text .typed-text {
     display: none;
@@ -50,29 +64,35 @@ h1{
 @media screen and (max-width: 768px){
 
     .section_presentation{
+
+        /* pour le responsive, on donne une marge, on change l'ordre des éléments en colonne,
+        en centre les éléments */
+
         margin-top: 10%;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
         align-items: center;
     }
     
     .presentation{
-    
-        margin-top: 2%;
+
+        //on donne une marge et une on fait prendre toute la largeur a l'éléments texte
+
+        margin-top: 10%;
         width: 100%;
-        text-align: center;
-        color: $last-Color;
+
     }
 
     h2 {   
         
+        // on change la taille d'écriture et l'interligne 
         font-size: 2em;
         line-height: 1.5em;
         
     }
 
     h1{
+        // on change la taille d'écriture et l'interligne et on rajoute un margin 
 
         font-size: 3em;
         line-height: 1.5em;
@@ -81,9 +101,7 @@ h1{
 
     .identite{
 
-        display: flex;
         width: 100%;
-        margin-bottom: 10%;
         
     }
 

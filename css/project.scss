@@ -1,4 +1,7 @@
 .projects{
+
+    // on donne une marge, la couleur texte et on aligne le texte
+
     margin-top: 4%;
     padding-top: 5%;
     color: $last-Color;
@@ -6,38 +9,54 @@
 }
 
 .project{
+
+    // on donne une marge, on flex les éléments et on les écarte.
+
     margin-top: 4%;
     display: flex;
     justify-content: space-around;
 }
 
 .box{
+
+    // on change la couleur du texte, on récupère l'héritage %box et on centre le texte
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     color: $secondary-Color;
     @extend %box;
-    text-align: center;
 }
 
-.project > .box > img{
+
+.box  img{
     
+    // on donne une taille à l'image , une marge , un border radius et un border
     width: 90%;
-    height: 50%;
+    margin-top: 2%;
     border-radius: 5%;
     border: $secondary-Color solid 1px;
 }
 
-.project > .box > p {
-
+.box_Bot{
+ 
+    // on flex les éléments, on les mets en colonne 
+    display: flex;
+    flex-direction: column;
     margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .button{
+    // on donne une marge au button et l'héritage %button
+
+    margin-top: 10%;
     @extend %button;
 }
 
 .button:hover{
+
+    // on donne un changement de couleur, de border, de background et de box quand on passe la souris
+    
     background-color: $last-Color;
     border: $main-Color solid 3px;
     color: $secondary-Color;

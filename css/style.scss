@@ -14,20 +14,32 @@
     padding: 0;
   }
 
-html {
+html { 
+
+  // permet le scroll non direct
+
   scroll-behavior: smooth;
 }
 
 body{
+    // on donne la couleur de fond 
 
     background-color: $main-Color;
 }
 
 p , input{
+
+  // on donne la font 
+
   @extend %font_OpenSans;
 }
 
+
+// ici commence le css pour l'apparition des éléments compilé au js.
+
 .reveal-loaded .reveal [class*="reveal-"] {
+
+    // les éléments on une opacité de 0, une transition de 0 sec et une translate vertical bot de 30px 
 
     opacity: 0!important;
     transform: translateY(30px)!important;

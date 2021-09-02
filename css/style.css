@@ -10,13 +10,14 @@ h2, h1 {
   font-style: normal;
   font-weight: 900; }
 
-header, .skill > div > p, .form textarea, .form .input, .close, p, input {
+header, .form textarea, .form .input, .close, p, input {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal; }
 
 .box {
   width: 25%;
+  padding-bottom: 5%;
   height: auto;
   padding-top: 1em;
   background: #FFF;
@@ -29,7 +30,6 @@ header, .skill > div > p, .form textarea, .form .input, .close, p, input {
   background-color: #0D1277;
   border: #000 solid 1px;
   border-radius: 3em;
-  margin-bottom: 40%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -140,8 +140,8 @@ nav a:hover {
 .section_presentation {
   display: flex;
   justify-content: space-around;
-  padding-top: 4%;
-  padding-bottom: 5%;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
   align-items: center; }
 
 .presentation {
@@ -166,8 +166,7 @@ h1 {
   justify-content: center; }
 
 .img {
-  width: 60%;
-  height: auto; }
+  width: 60%; }
 
 .hero .hero-text .typed-text {
   display: none; }
@@ -177,16 +176,15 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .section_presentation {
+    /* pour le responsive, on donne une marge, on change l'ordre des éléments en colonne,
+        en centre les éléments */
     margin-top: 10%;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
     align-items: center; }
   .presentation {
-    margin-top: 2%;
-    width: 100%;
-    text-align: center;
-    color: #FFF; }
+    margin-top: 10%;
+    width: 100%; }
   h2 {
     font-size: 2em;
     line-height: 1.5em; }
@@ -195,9 +193,7 @@ h1 {
     line-height: 1.5em;
     margin-bottom: 10%; }
   .identite {
-    display: flex;
-    width: 100%;
-    margin-bottom: 10%; } }
+    width: 100%; } }
 
 .skills {
   background-color: #FFF;
@@ -255,14 +251,17 @@ h1 {
   /* Uniquement centrer le formulaire sur la page */
   /* Encadré pour voir les limites du formulaire */
   text-align: center;
-  margin-top: 2em; }
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .form div + div {
   margin-top: 1em; }
 
 .form textarea {
   /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
+      Par défaut, les textarea ont une police monospace */
   text-align: center;
   /* Pour que tous les champs texte aient la même dimension */
   width: 50%;
@@ -276,7 +275,7 @@ h1 {
 
 .form .input {
   /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
+      Par défaut, les textarea ont une police monospace */
   text-align: center;
   /* Pour que tous les champs texte aient la même dimension */
   width: 20%;
@@ -296,7 +295,25 @@ h1 {
 
 .form .button {
   width: 20%;
-  margin-bottom: 0%; }
+  margin-top: 0%; }
+
+.error {
+  display: flex;
+  justify-content: center; }
+
+.success {
+  color: green;
+  width: 20%;
+  background: #FFF;
+  border-radius: 1em;
+  font-size: 1.5em; }
+
+.err {
+  color: red;
+  width: 20%;
+  background: #FFF;
+  border-radius: 1em;
+  font-size: 1.5em; }
 
 .form .button:hover {
   background-color: #000;
@@ -326,20 +343,24 @@ h1 {
   justify-content: space-around; }
 
 .box {
-  color: #000;
-  text-align: center; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000; }
 
-.project > .box > img {
+.box img {
   width: 90%;
-  height: 50%;
+  margin-top: 2%;
   border-radius: 5%;
   border: #000 solid 1px; }
 
-.project > .box > p {
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 5%;
-  margin-right: 5%; }
+.box_Bot {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%; }
+
+.button {
+  margin-top: 10%; }
 
 .button:hover {
   background-color: #FFF;
@@ -435,10 +456,6 @@ h1 {
   display: flex;
   align-items: flex-end; }
 
-.first_Modal_Bot .close {
-  width: 40%;
-  margin-bottom: 1%; }
-
 @media screen and (max-width: 768px) {
   .first_Modal_Top {
     flex-direction: column; }
@@ -454,8 +471,7 @@ h1 {
   .first_Modal_Button {
     width: 100%; }
   .first_Modal_Bot .close {
-    margin-top: 20%;
-    margin-bottom: 0%; } }
+    margin-top: 20%; } }
 
 .footer {
   display: flex;

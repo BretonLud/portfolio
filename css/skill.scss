@@ -1,5 +1,7 @@
 .skills{
     
+    //On donne une couleur au fond, on align le texte et on donne du padding
+
     background-color: $last-Color;
     text-align: center;
     padding-top: 5%;
@@ -7,23 +9,29 @@
 }
 
 .skill{
+    // on donne une marge, on flex les éléments et on les écarte
+
     margin-top: 1%;
     display: flex;
     justify-content: space-around;
 }
 
 .skill > div > p {
+    // on donne un margin et une font 
+
     margin-top: 10%;
-    @extend %font_OpenSans;
 }
 
 .element{
-    
+    // on donne a chaque éléments une taille de 30%
+
     width: 30%;
 }
 
 .front{
 
+    // on flex les éléments
+        
     margin-top: 10%;
     display: flex;
     justify-content: space-around;  

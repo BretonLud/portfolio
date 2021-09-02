@@ -83,19 +83,26 @@ if (isset($_POST['formcontact'])){
 		<h1>Mes projets</h1>
 		<div class="project">
 			<div class="box reveal-2">
-				<img src="./css/images/fricoot.png" alt="image projet 1">
-				<p>
-					Développement au sein d'une équipe d'un questionnaire façon kahoot qui n'a pas abouti.
-				</p>
-				<input type="button" class="button" id="projet1" value="en savoir plus">
-					
+				<div>
+					<img src="./css/images/fricoot.png" alt="image projet 1">
+				</div>
+				<div class="box_Bot">
+					<p>
+						Développement au sein d'une équipe d'un questionnaire façon kahoot qui n'a pas abouti.
+					</p>
+					<input type="button" class="button" id="projet1" value="en savoir plus">
+				</div>					
 			</div>
 			<div class="box reveal-2">
-				<img src="./css/images/portfolio.png" alt="image projet 2">
-				<p>
-					Développement de mon portfolio afin de faire mes premiers pas dans les projets.
-				</p>
-				<input type="button" class="button" id="projet2" value="en savoir plus">
+				<div>
+					<img src="./css/images/portfolio.png" alt="image projet 2">
+				</div>
+				<div class="box_Bot">
+					<p>
+						Développement de mon portfolio afin de faire mes premiers pas dans les projets et avoir de la visibilitée.
+					</p>
+					<input type="button" class="button" id="projet2" value="en savoir plus">
+				</div>
 			</div>
 			<!--<div class="box" id="projet3">
 				<p>test</p>
@@ -167,7 +174,35 @@ if (isset($_POST['formcontact'])){
 
 <section id="contact" class="contact reveal">
 	<h1>Contact</h1>		
-		<form class="form" method="post" action="index.php">
+		<form class="form" method="post" action="index.php#contact">
+			<div class="error">
+			<?php
+			// affiche le message d'erreur
+			
+				if(isset($_GET['reg_err']))
+				{
+					$err = htmlspecialchars($_GET['reg_err']);
+
+					switch($err)
+					{
+						case 'success':
+						?>	
+						<div class="success">							
+							<p>Mail envoyé !<p>
+						</div>
+						<?php
+						break;
+
+						case 'fail':
+						?>							
+						<div class="err">							
+							<p>Mail non envoyé !<p>
+						</div>						
+						<?php
+					}
+				}
+			?>
+			</div>
 			<div>		
 				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern="^[A-Za-z \']+$">		
 			</div>
