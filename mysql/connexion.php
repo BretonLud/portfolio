@@ -13,11 +13,11 @@ Class Connexion {
     const USER = DB_USER;
     const PASW = DB_PWD; 
  
- protected $dbh;
+  protected $dbh;
  
-  function conect(){
+  public function connect(){
      
    return $dbh = new PDO('mysql:host='.self::HOST.'; dbname='.self::DBNA,self::USER,self::PASW);
      }
-     
-   }
+  
+}

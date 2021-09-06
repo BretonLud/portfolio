@@ -1,9 +1,16 @@
+hr{
+    margin-top:4%;
+    margin-bottom: 1%;
+}
 .footer{
     display: flex;
     justify-content: space-around;
+    
 }
 
 .footer div img{
-    width: 100px;
+    
+    width: 100%;
+    height: auto;
     cursor: pointer;
 }

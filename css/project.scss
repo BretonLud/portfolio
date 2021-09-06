@@ -44,6 +44,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .button{
@@ -80,7 +82,7 @@
         margin-top: 5%;
     }
 
-    .button{
+    .project .button{
         margin-bottom: 20%;
     }
 }

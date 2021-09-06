@@ -1,4 +1,5 @@
-    <footer class="footer">
+<hr>
+   <footer class="footer">
         <div>
             <!--Logo github-->
             <a href="https://github.com/BretonLud" target=_blank> <img src="./css/images/github.png" alt="github"/> </a>

@@ -10,7 +10,8 @@ if (isset($_POST['formcontact'])){
     $email = $_POST["email"];
     $message = $_POST["message"];
 	$objet = $_POST["objet"];
-	$contact = (new Contact())->newContact($name, $email, $message, $objet);
+	$contact = (new Contact)->newContact($name, $email, $message, $objet);
+	//Contact::add(new Contact($name, $email, $message, $objet));
 	$mail = (new Mail())->newMail($name, $email, $message, $objet);    	
 }  
     
@@ -30,7 +31,7 @@ if (isset($_POST['formcontact'])){
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>
 	<div class="identite reveal-3">
-		<img src="./css/images/id.webp" class="img" alt="photo face">
+		<img src="./css/images/id.png" class="img" alt="photo face">
 	</div>		
 </section>
 
@@ -115,11 +116,12 @@ if (isset($_POST['formcontact'])){
 		<div  id="modal1" class="modal">
 			<div class="first_Modal_Top">
 				<div class="first_Modal_Text">
-					<h2>Fricoot</h2>
+				 <h2>Fricoot</h2>
 					<p>Notre formulaire a été fait en se basant sur kahoot pour la partie designe.
 					Nous avons mis via du js la possibilitée d’ajouter des questions.  
 					Nous stockions le titre, les questions et les réponses via php et mysql.
 					Le nom du titre sert ensuite au joueur à retrouver le questionnaire qui correspond.</p>
+					<a href="https://github.com/BretonLud/Fricoot" target=_blank><input type="button" class="button" value="Repertory Github"></input> </a>
 				</div>
 				<div>
 					<img src="./css/images/fri_Questionnaire.png" alt="image questionnaire">
@@ -139,12 +141,13 @@ if (isset($_POST['formcontact'])){
 		<div  id="modal2" class="modal">
 			<div class="first_Modal_Top">
 				<div class="first_Modal_Text">
-					<h2>Portfolio</h2>
+					<a href="https://github.com/BretonLud/portfolio" target=_blank><h2>Portfolio</h2></a>
 					<p>Comme projet nous devions faire un portfolio. 
 						Nous avions la possibilité d'utiliser des templates mais ici ce n'est pas le cas.<br>
 						Les fonctions sur le portfolio ont été faites à la main sauf le 'typed.js'.<br>
 						Une base de données a été créée pour sauvegarde les mails envoyés.
 					</p>
+					<a href="https://github.com/BretonLud/portfolio" target=_blank><input type="button" class="button" value="Repertory Github"></input> </a>
 				</div>
 				<div>
 					<img src="./css/images/competence.png" alt="image portfolio">
@@ -220,5 +223,6 @@ if (isset($_POST['formcontact'])){
 			</div>
 		</form>	
 </section>
+
 
 <?php require './templates/footer.php' ?>
