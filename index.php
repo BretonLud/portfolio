@@ -31,7 +31,7 @@ if (isset($_POST['formcontact'])){
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>
 	<div class="identite reveal-3">
-		<img src="./css/images/id.png" class="img" alt="photo face">
+		<img src="./css/images/id.webp" class="img" alt="photo face">
 	</div>		
 </section>
 
@@ -96,7 +96,7 @@ if (isset($_POST['formcontact'])){
 			</div>
 			<div class="box reveal-2">
 				<div>
-					<img src="./css/images/portfolio.png" alt="image projet 2">
+					<img src="./css/images/portfolio.jpg" alt="image projet 2">
 				</div>
 				<div class="box_Bot">
 					<p>
