@@ -91,7 +91,7 @@ if (isset($_POST['formcontact'])){
 					<p>
 						Développement au sein d'une équipe d'un questionnaire façon kahoot qui n'a pas abouti.
 					</p>
-					<input type="button" class="button" id="projet1" value="en savoir plus">
+					<input type="button" class="button" id="projet1" value="En savoir plus">
 				</div>					
 			</div>
 			<div class="box reveal-2">
@@ -102,7 +102,7 @@ if (isset($_POST['formcontact'])){
 					<p>
 						Développement de mon portfolio afin de faire mes premiers pas dans les projets et avoir de la visibilitée.
 					</p>
-					<input type="button" class="button" id="projet2" value="en savoir plus">
+					<input type="button" class="button" id="projet2" value="En savoir plus">
 				</div>
 			</div>
 			<!--<div class="box" id="projet3">
@@ -207,13 +207,13 @@ if (isset($_POST['formcontact'])){
 			?>
 			</div>
 			<div>		
-				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern="^[A-Za-z \']+$">		
+				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern="^[A-Za-z \']+$" maxlength="50">		
 			</div>
 			<div>
-				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$'>			
+				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' maxlength="50">			
 			</div>
 			<div>
-				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$'>			
+				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' maxlength="100">			
 			</div>
 			<div>
 				<textarea id="message" class="reveal-4" name="message" placeholder="Veuillez écrire ici votre message, 2000 caractères maximum" maxlength="2000" required></textarea>

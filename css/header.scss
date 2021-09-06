@@ -8,6 +8,7 @@ header{
     left: 0;
     @extend %font_OpenSans;
     z-index: 10;
+    font-size: 2em;
 }
 
 
@@ -44,14 +45,6 @@ a:visited{
     @extend %shadow;
   }
 
-nav input[type=checkbox]:checked + ul, nav ul{
-
-    // on met le contenu de ul en ligne
-
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
 
 nav ul {
     
@@ -143,21 +136,20 @@ nav a:hover{
         width: 80%;     
         
     }
-
-    nav input[type=checkbox]:checked + ul{
+    
+    //nav input[type=checkbox]:checked + ul{
 
         /*on flex ce qu'il y dans le ul et on met en colonne et
         change les couleurs ainsi qu'un border radius sur les angles inférieur*/
 
-        display: flex;
+      /*  display: flex;
         flex-direction: column;
         background-color: $last-Color;
         color: $main-Color;
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1em;
     
-    }
-
+    }*/
 
     nav .menu{
         // on donne au menu la proportion de 80%

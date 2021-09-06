@@ -1,8 +1,10 @@
 .contact{
   //
-    margin-top: 10%;
-    color: $last-Color;
+    margin-top: 5%;
+    padding-top: 5%;
+    color: $secondary-Color;
     text-align: center;
+    background-color: $last-Color;
 }
 
 .form{
@@ -26,15 +28,24 @@
   @extend %font_OpenSans;
   text-align: center;
   /* Pour que tous les champs texte aient la même dimension */
-  width: 50%;
+  width: 40%;
   height: auto;
   box-sizing: border-box;
   border-radius: 1em;
+   /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+   vertical-align: top;
+   text-align: left;
+   /* Pour donner assez de place pour écrire du texte */
+   height: 15em;
+   padding-left: 2%;
+   padding-right: 2%;
+   padding-top: 1%;
+   border: $main-Color solid 3px;
 }
 
 .form input:focus, textarea:focus {
   /* Pour souligner légèrement les éléments actifs */
-  border-color: $last-Color 3px;
+  border-color: $main-Color 3px;
 }
 
 .form .input{
@@ -44,26 +55,20 @@
       text-align: center;
       /* Pour que tous les champs texte aient la même dimension */
       width: 20%;
-      height: 2em;
+      height: 3em;
       box-sizing: border-box;
       border-radius: 1em;
-}
-
-.form textarea{
-  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
-  vertical-align: top;
-  text-align: left;
-  /* Pour donner assez de place pour écrire du texte */
-  height: 10em;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 1%;
+      border: $main-Color solid 3px;
 }
 
 .form .button{
   // taille du button
     width: 20%;
     margin-top: 0%;
+    margin-bottom: 2.5%;
+    background-color: $last-Color;
+    color: $main-Color;
+    font-size: 1.5em;
 }
 
 .error{
@@ -78,7 +83,7 @@
 
   color: green;
   width: 20%; 
-  background: $last-Color;
+  background: $main-Color;
   border-radius: 1em;
   font-size: 1.5em;
 } 
@@ -89,7 +94,7 @@
 
   color: red;
   width: 20%; 
-  background: $last-Color;
+  background: $main-Color;
   border-radius: 1em;
   font-size: 1.5em;
 }

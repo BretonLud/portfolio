@@ -16,7 +16,18 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ \"./css/style.scss\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ \"./src/modal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reveal */ \"./src/reveal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reveal__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack://portfolio/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ \"./css/style.scss\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ \"./src/modal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reveal */ \"./src/reveal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reveal__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n //get id\n\nvar logo = document.getElementById(\"logo\");\nvar menu = document.getElementById(\"menu\");\nvar presentation = document.getElementById(\"1\");\nvar skills = document.getElementById(\"2\");\nvar project = document.getElementById(\"3\");\nvar contact = document.getElementById(\"4\");\nvar check = document.getElementById(\"mobile\");\ncheck.addEventListener('click', function () {\n  if (check.checked == true) {\n    menu.style.display = \"flex\";\n    menu.style.background = \"white\";\n    menu.style.flexDirection = \"column\";\n    menu.style.borderBottomLeftRadius = \"1em\";\n    menu.style.borderBottomRightRadius = \"1em\";\n    logo.style.borderBottomLeftRadius = \"0\";\n    logo.style.borderBottomRightRadius = \"0\";\n  } else if (check.checked == false) {\n    menu.style.display = \"none\";\n    logo.style.borderBottomLeftRadius = \"1em\";\n    logo.style.borderBottomRightRadius = \"1em\";\n  }\n});\n\npresentation.onclick = function () {\n  menu.style.display = \"none\";\n  check.checked = false;\n  logo.style.borderBottomLeftRadius = \"1em\";\n  logo.style.borderBottomRightRadius = \"1em\";\n};\n\nskills.onclick = function () {\n  menu.style.display = \"none\";\n  check.checked = false;\n  logo.style.borderBottomLeftRadius = \"1em\";\n  logo.style.borderBottomRightRadius = \"1em\";\n};\n\nproject.onclick = function () {\n  menu.style.display = \"none\";\n  check.checked = false;\n  logo.style.borderBottomLeftRadius = \"1em\";\n  logo.style.borderBottomRightRadius = \"1em\";\n};\n\ncontact.onclick = function () {\n  menu.style.display = \"none\";\n  check.checked = false;\n  logo.style.borderBottomLeftRadius = \"1em\";\n  logo.style.borderBottomRightRadius = \"1em\";\n};\n\n//# sourceURL=webpack://portfolio/./src/menu.js?");
 
 /***/ }),
 
