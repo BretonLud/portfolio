@@ -219,7 +219,7 @@ if (isset($_POST['formcontact'])){
 				<textarea id="message" class="reveal-4" name="message" placeholder="Veuillez écrire ici votre message, 2000 caractères maximum" maxlength="2000" required></textarea>
 			</div>
 			<div id="submit">
-				<input type="submit" value="Envoyer le message" class="button" name="formcontact">
+				<input type="submit" value="Envoyer" class="button" name="formcontact">
 			</div>
 		</form>	
 </section>

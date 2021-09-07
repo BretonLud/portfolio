@@ -29,21 +29,7 @@
     margin-bottom: 2%;
 }
 
-%button{
 
-    width: 40%;
-    height: 2em;
-    background-color: $main-Color;
-    border: $secondary-Color solid 1px;
-    border-radius: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: $last-Color;
-    box-shadow: 2px 5px $secondary-Color;
-    cursor: pointer;
-    
-}
 
 %modal{
 
@@ -53,3 +39,22 @@
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
+
+%button{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid $main-Color;
+    background: $main-Color;
+  }
+  
+  %button:hover {
+    background: $last-Color;
+    color: $main-Color
+  }

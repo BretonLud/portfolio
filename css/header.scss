@@ -49,8 +49,10 @@ a:visited{
 nav ul {
     
     //on desactive les puces
-
+    
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li{
@@ -73,10 +75,11 @@ nav > div > ul > li > a{
 
     display: block;
     text-decoration: none;
-    padding: 10px 0px;
 }
 
-
+.logo_img{
+    padding-top: 1%;
+}
 
 nav a:hover{
 

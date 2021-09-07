@@ -66,8 +66,7 @@
     width: 20%;
     margin-top: 0%;
     margin-bottom: 2.5%;
-    background-color: $last-Color;
-    color: $main-Color;
+    @extend %button;
     font-size: 1.5em;
 }
 
@@ -101,10 +100,7 @@
 
   .form .button:hover{
     // changement de la couleur et du shadow quand on passe la souris
-    background-color: $secondary-Color;
-    border: $main-Color solid 3px;
-    color: $last-Color;
-    box-shadow: 2px 5px $last-Color;
+    @extend %button:hover
 
 }
 

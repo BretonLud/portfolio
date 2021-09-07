@@ -57,12 +57,7 @@
 
 .button:hover{
 
-    // on donne un changement de couleur, de border, de background et de box quand on passe la souris
-    
-    background-color: $last-Color;
-    border: $main-Color solid 3px;
-    color: $secondary-Color;
-    box-shadow: 2px 5px $main-Color;
+    @extend %button:hover
     
 }
 
