@@ -90,9 +90,9 @@ if (isset($_POST['formcontact'])){
 				<div class="box_Bot">
 					<p>
 						Développement au sein d'une équipe d'un questionnaire façon kahoot qui n'a pas abouti.
-					</p>
-					<input type="button" class="button" id="projet1" value="En savoir plus">
-				</div>					
+					</p>					
+				</div>
+				<input type="button" class="button" id="projet1" value="En savoir plus">					
 			</div>
 			<div class="box reveal-2">
 				<div>
@@ -101,9 +101,9 @@ if (isset($_POST['formcontact'])){
 				<div class="box_Bot">
 					<p>
 						Développement de mon portfolio afin de faire mes premiers pas dans les projets et avoir de la visibilitée.
-					</p>
-					<input type="button" class="button" id="projet2" value="En savoir plus">
+					</p>					
 				</div>
+				<input type="button" class="button" id="projet2" value="En savoir plus">
 			</div>
 			<!--<div class="box" id="projet3">
 				<p>test</p>

@@ -306,7 +306,6 @@ h1 {
   border: #0D1277 solid 3px; }
 
 .form .button {
-  width: 20%;
   margin-top: 0%;
   margin-bottom: 2.5%;
   font-size: 1.5em; }
@@ -452,13 +451,9 @@ h1 {
   transform: scale(1.5); }
 
 .first_Modal_Button {
-  width: 30%;
   display: flex;
   align-items: flex-end;
   justify-content: center; }
-
-.first_Modal_Text input {
-  width: 30%; }
 
 .modals a {
   text-decoration: none;
