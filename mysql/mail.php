@@ -4,10 +4,10 @@ class Mail {
 
     function newMail(){
 
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $message = $_POST["message"];
-        $objet = $_POST["objet"];
+        $name = trim(stripslashes(htmlspecialchars($_POST["name"])));
+        $email = trim(stripslashes(htmlspecialchars($_POST["email"])));
+        $message = trim(stripslashes(htmlspecialchars($_POST["message"])));
+        $objet = trim(stripslashes(htmlspecialchars($_POST["objet"])));
 
         /*Si les champs prenom et mail ne sont pas vides et si les donnees ont
         *bien la forme attendue...*/

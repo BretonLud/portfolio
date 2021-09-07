@@ -10,7 +10,7 @@ if (isset($_POST['formcontact'])){
     $email = $_POST["email"];
     $message = $_POST["message"];
 	$objet = $_POST["objet"];
-	$contact = (new Contact)->newContact($name, $email, $message, $objet);
+	$contact = (new Contact($name, $email, $message, $objet))->newContact($name, $email, $message, $objet);
 	//Contact::add(new Contact($name, $email, $message, $objet));
 	$mail = (new Mail())->newMail($name, $email, $message, $objet);    	
 }  
@@ -44,11 +44,12 @@ if (isset($_POST['formcontact'])){
 			<p>Front-end</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/html.png" alt="logo html">
-					<img class="logo_CSS" src="./css/images/js.png" alt="logo js">
+					<img src="./css/images/js.png" alt="logo js">
+					<img class="logo_CSS" src="./css/images/html.png" alt="logo html">					
 				</div>
-				<div>
-					<img src="./css/images/css3.png" alt="logo css">
+				<div class="logo_Front-end">
+					<img src="./css/images/sass.png" alt="logo sass">
+					<img class="logo_CSS" src="./css/images/css3.png" alt="logo css">
 				</div>
 			</div>
 		</div>
@@ -64,12 +65,13 @@ if (isset($_POST['formcontact'])){
 			</div>
 		</div>
 		<div class="element reveal-2">
-			<p>Logiciels</p>
+			<p>Logiciels et outils</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
 					<img src="./css/images/wordpress.png" alt="logo wordpress">
+					<img class="logo_CSS" src="./css/images/git.png">
 				</div>
-				<div>
+				<div class="logo_Front-end">
 					<img src="./css/images/vsc.png" alt="logo visual studio code">
 				</div>
 			</div>
