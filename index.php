@@ -132,7 +132,7 @@ if (isset($_POST['formcontact'])){
 					<img  src="./css/images/fri_Php.png" alt="image php">
 				</div>
 				<div class="first_Modal_Button">
-					<input type="button" class="close" value="retour">
+					<input type="button" class="close" value="Retour">
 				</div>
 			</div>
 		</div>
@@ -158,7 +158,7 @@ if (isset($_POST['formcontact'])){
 					<img  src="./css/images/mailPHP.png" alt="image php">
 				</div>
 				<div class="first_Modal_Button">
-					<input type="button" class="close" value="retour">
+					<input type="button" class="close" value="Retour">
 				</div>
 			</div>
 		</div>

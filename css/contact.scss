@@ -67,6 +67,8 @@
     margin-bottom: 2.5%;
     @extend %button;
     font-size: 1.5em;
+    padding-bottom: 40px;
+    padding-top: 5px;
 }
 
 .error{
