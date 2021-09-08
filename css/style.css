@@ -488,10 +488,11 @@ hr {
 
 .footer {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-bottom: 1%; }
 
 .footer div img {
-  width: 100%;
+  width: 80%;
   height: auto;
   cursor: pointer; }
 
