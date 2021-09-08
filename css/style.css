@@ -338,7 +338,11 @@ h1 {
   .form .input {
     width: 50%; }
   .form textarea {
-    width: 80%; } }
+    width: 80%; }
+  .success {
+    width: 50%; }
+  .err {
+    width: 50%; } }
 
 .projects {
   margin-top: 2%;
