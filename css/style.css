@@ -302,7 +302,7 @@ h1 {
   width: 20%;
   height: 3em;
   box-sizing: border-box;
-  border-radius: 1em;
+  border-radius: 0.5em;
   border: #0D1277 solid 3px; }
 
 .form .button {
