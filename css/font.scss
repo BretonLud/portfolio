@@ -1,5 +1,14 @@
 @font-face {
     font-family: 'Ruda';
-    src:local('Ruda-Black'),  url(./font/Ruda-Black.ttf) format('truetype'),
-        local('OpenSans-Regular'), url(./font/OpenSans-Regular.woff);
+    src:local('Ruda-Black'),  url(./font/Ruda-Black.ttf) format('truetype');
 }
+
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./font/open-sans-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./font/open-sans-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }

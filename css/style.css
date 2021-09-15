@@ -4,7 +4,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Ruda';
-  src: local("Ruda-Black"), url(../dist/5967960c1fa07fd6859f.ttf) format("truetype"), local("OpenSans-Regular"), url(../dist/82394c2aed4e69aa493a.woff); }
+  src: local("Ruda-Black"), url(../dist/5967960c1fa07fd6859f.ttf) format("truetype"); }
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(../dist/2a947e89d2e241121d6f.woff2) format("woff2"), url(../dist/fcc115e3c4b25a4d6c4c.woff) format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 a:visited, nav ul li {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
