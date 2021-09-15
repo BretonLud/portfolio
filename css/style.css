@@ -4,7 +4,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Ruda';
-  src: local("Ruda-Black"), url(../dist/5967960c1fa07fd6859f.ttf) format("truetype"), local("OpenSans-Regular"), url(../dist/1b0809d519837cb7aad3.ttf) format("truetype"); }
+  src: local("Ruda-Black"), url(../dist/5967960c1fa07fd6859f.ttf) format("truetype"), local("OpenSans-Regular"), url(../dist/82394c2aed4e69aa493a.woff); }
 
 a:visited, nav ul li {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
