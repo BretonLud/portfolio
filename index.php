@@ -123,7 +123,7 @@ if (isset($_POST['formcontact'])){
 					Nous avons mis via du js la possibilitée d’ajouter des questions.  
 					Nous stockions le titre, les questions et les réponses via php et mysql.
 					Le nom du titre sert ensuite au joueur à retrouver le questionnaire qui correspond.</p>
-					<a href="https://github.com/BretonLud/Fricoot" target=_blank><input type="button" class="button" value="Repertory Github"></input> </a>
+					<a href="https://github.com/BretonLud/Fricoot" target=_blank rel="noreferrer noopener"><input type="button" class="button" value="Repertory Github"></input> </a>
 				</div>
 				<div>
 					<img src="./css/images/fri_Questionnaire.png" alt="image questionnaire">
@@ -143,13 +143,13 @@ if (isset($_POST['formcontact'])){
 		<div  id="modal2" class="modal">
 			<div class="first_Modal_Top">
 				<div class="first_Modal_Text">
-					<a href="https://github.com/BretonLud/portfolio" target=_blank><h2>Portfolio</h2></a>
+					<h2>Portfolio</h2>
 					<p>Comme projet nous devions faire un portfolio. 
 						Nous avions la possibilité d'utiliser des templates mais ici ce n'est pas le cas.<br>
 						Les fonctions sur le portfolio ont été faites à la main sauf le 'typed.js'.<br>
 						Une base de données a été créée pour sauvegarde les mails envoyés.
 					</p>
-					<a href="https://github.com/BretonLud/portfolio" target=_blank><input type="button" class="button" value="Repertory Github"></input> </a>
+					<a href="https://github.com/BretonLud/portfolio" target=_blank rel="noreferrer noopener"><input type="button" class="button" value="Repertory Github"></input> </a>
 				</div>
 				<div>
 					<img src="./css/images/competence.png" alt="image portfolio">
