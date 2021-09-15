@@ -69,7 +69,7 @@ if (isset($_POST['formcontact'])){
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
 					<img src="./css/images/wordpress.png" alt="logo wordpress">
-					<img class="logo_CSS" src="./css/images/git.png">
+					<img class="logo_CSS" src="./css/images/git.png" alt="logo git">
 				</div>
 				<div class="logo_Front-end">
 					<img src="./css/images/vsc.png" alt="logo visual studio code">

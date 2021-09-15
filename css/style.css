@@ -213,6 +213,9 @@ h1 {
   display: flex;
   justify-content: space-around; }
 
+.skill img {
+  width: 100%; }
+
 .skill > div > p {
   margin-top: 10%;
   font-size: 1.5em;

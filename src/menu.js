@@ -130,6 +130,7 @@ if (smallScreen) {
                     logo.style.borderBottomLeftRadius = "1em";
                     logo.style.borderBottomRightRadius = "1em";
                 }
+                
                 presentation.onclick = function(){
                     menu.style.display = "none";
                     check.checked = false;
