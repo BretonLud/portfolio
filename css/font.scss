@@ -1,9 +1,5 @@
 @font-face {
     font-family: 'Ruda';
-    src:url(./font/Ruda-Black.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Open-Sans';
-    src: url(./font/OpenSans-Regular.ttf) format('truetype');
+    src:local('Ruda-Black'),  url(./font/Ruda-Black.ttf) format('truetype'),
+        local('OpenSans-Regular'), url(./font/OpenSans-Regular.ttf) format('truetype');
 }
