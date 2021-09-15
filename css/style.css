@@ -2,6 +2,14 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/style.scss ***!
   \*********************************************************************************************************/
 @charset "UTF-8";
+@font-face {
+  font-family: 'Ruda';
+  src: url(../dist/5967960c1fa07fd6859f.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url(../dist/1b0809d519837cb7aad3.ttf) format("truetype"); }
+
 a:visited, nav ul li {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); }
 
