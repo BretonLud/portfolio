@@ -31,7 +31,7 @@ if (isset($_POST['formcontact'])){
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>
 	<div class="identite reveal-3">
-		<img src="./css/images/id.webp" class="img" alt="photo face">
+		<img src="./css/images/id.webp" class="img" alt="photo face" width="76%" height="76%">
 	</div>		
 </section>
 
@@ -45,11 +45,11 @@ if (isset($_POST['formcontact'])){
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
 					<img src="./css/images/js.png" alt="logo js">
-					<img class="logo_CSS" src="./css/images/html.png" alt="logo html">					
+					<img class="logo_CSS" src="./css/images/html.png" alt="logo html" width="96px" height="96px">					
 				</div>
 				<div class="logo_Front-end">
 					<img src="./css/images/sass.png" alt="logo sass">
-					<img class="logo_CSS" src="./css/images/css3.png" alt="logo css">
+					<img class="logo_CSS" src="./css/images/css3.png" alt="logo css" width="96px" height="96px">
 				</div>
 			</div>
 		</div>
@@ -57,10 +57,10 @@ if (isset($_POST['formcontact'])){
 			<p>Back-end</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/php.png" alt="logo php">
+					<img src="./css/images/php.png" alt="logo php" width="96px" height="96px">
 				</div>
 				<div>
-					<img src="./css/images/mysql.png" alt="logo mysql">
+					<img src="./css/images/mysql.png" alt="logo mysql" width="96px" height="96px">
 				</div>
 			</div>
 		</div>
@@ -68,11 +68,11 @@ if (isset($_POST['formcontact'])){
 			<p>Logiciels et outils</p>
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
-					<img src="./css/images/wordpress.png" alt="logo wordpress">
-					<img class="logo_CSS" src="./css/images/git.png" alt="logo git">
+					<img src="./css/images/wordpress.png" alt="logo wordpress" width="96px" height="96px">
+					<img class="logo_CSS" src="./css/images/git.png" alt="logo git" width="96px" height="96px">
 				</div>
 				<div class="logo_Front-end">
-					<img src="./css/images/vsc.png" alt="logo visual studio code">
+					<img src="./css/images/vsc.png" alt="logo visual studio code" width="96px" height="96px">
 				</div>
 			</div>
 		</div>
@@ -87,7 +87,7 @@ if (isset($_POST['formcontact'])){
 		<div class="project">
 			<div class="box reveal-2">
 				<div>
-					<img src="./css/images/fricoot.png" alt="image projet 1">
+					<img src="./css/images/fricoot.webp" alt="image projet 1" width="90%" height="100%">
 				</div>
 				<div class="box_Bot">
 					<p>
@@ -98,7 +98,7 @@ if (isset($_POST['formcontact'])){
 			</div>
 			<div class="box reveal-2">
 				<div>
-					<img src="./css/images/portfolio.jpg" alt="image projet 2">
+					<img src="./css/images/portfolio.jpg" alt="image projet 2" width="90%" height="100%">
 				</div>
 				<div class="box_Bot">
 					<p>
@@ -131,7 +131,7 @@ if (isset($_POST['formcontact'])){
 			</div>				
 			<div class="first_Modal_Bot">
 				<div class="first_Modal_Div">
-					<img  src="./css/images/fri_Php.png" alt="image php">
+					<img  src="./css/images/fri_Php.webp" alt="image php">
 				</div>
 				<div class="first_Modal_Button">
 					<input type="button" class="close" value="Retour">
@@ -152,7 +152,7 @@ if (isset($_POST['formcontact'])){
 					<a href="https://github.com/BretonLud/portfolio" target=_blank rel="noreferrer noopener"><input type="button" class="button" value="Repertory Github"></input> </a>
 				</div>
 				<div>
-					<img src="./css/images/competence.png" alt="image portfolio">
+					<img src="./css/images/competence.webp" alt="image portfolio">
 				</div>
 			</div>				
 			<div class="first_Modal_Bot">
