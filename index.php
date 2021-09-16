@@ -98,7 +98,7 @@ if (isset($_POST['formcontact'])){
 			</div>
 			<div class="box reveal-2">
 				<div>
-					<img src="./css/images/portfolio.jpg" alt="image projet 2" width="90%" height="100%">
+					<img src="./css/images/portfolio.webp" alt="image projet 2" width="90%" height="100%">
 				</div>
 				<div class="box_Bot">
 					<p>
