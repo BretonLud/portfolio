@@ -183,6 +183,7 @@ if (smallScreen) {
         if (screenObj <= 768){
 
             menu.style.visibility ="hidden";
+            menu.style.flexDirection ="column";
             menu.style.opacity = "0";
             menu.style.transitionDuration = "0s";
             logo.style.borderBottomLeftRadius = "1em";

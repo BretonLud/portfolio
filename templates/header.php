@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Breton Ludovic</title>
 </head>
-<body>
+<body id="mastercontainer">
 <!-- Menu -->
     <header>            
         <nav>        
