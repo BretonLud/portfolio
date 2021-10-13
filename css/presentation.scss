@@ -58,6 +58,9 @@ h1{
     display: none;
 }
 
+.text_h1 {
+    height: 250px;
+}
 .hero .hero-text .typed-cursor {
     display: none;
 }
@@ -81,7 +84,12 @@ h1{
 
         margin-top: 10%;
         width: 100%;
+        padding-left: 0;
 
+    }
+
+    .text_h1{
+        height: 240px;
     }
 
     h2 {   

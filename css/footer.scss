@@ -3,13 +3,33 @@ hr{
 }
 .footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-bottom: 1%;   
 }
 
 .footer div img{
     
-    width: 80%;
+    width: 40%;
     height: auto;
     cursor: pointer;
+}
+ 
+.icone{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and(max-width:768px) {
+    
+    .footer{
+        justify-content: space-around;
+    }
+
+    .icone--1{
+        justify-content: left;
+    }
+
+    .icone--2{
+        justify-content: right;
+    }
 }

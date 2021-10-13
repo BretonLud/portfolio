@@ -73,7 +73,7 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 nav {
   width: 100%;
@@ -106,7 +106,7 @@ nav > div > ul > li > a {
   text-decoration: none; }
 
 .logo_img {
-  padding-top: 1%; }
+  padding-top: 0.2em; }
 
 nav a:hover {
   text-shadow: 0px 4px 4px #0D1277; }
@@ -130,9 +130,14 @@ nav a:hover {
   nav label {
     display: block; }
   nav ul {
-    display: none;
+    display: flex;
     position: absolute;
-    width: 80%; }
+    width: 80%;
+    opacity: 0;
+    background-color: #FFF;
+    flex-direction: column;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em; }
   /*on flex ce qu'il y dans le ul et on met en colonne et
         change les couleurs ainsi qu'un border radius sur les angles inférieur*/
   /*  display: flex;
@@ -192,6 +197,9 @@ h1 {
 .hero .hero-text .typed-text {
   display: none; }
 
+.text_h1 {
+  height: 250px; }
+
 .hero .hero-text .typed-cursor {
   display: none; }
 
@@ -205,7 +213,10 @@ h1 {
     align-items: center; }
   .presentation {
     margin-top: 10%;
-    width: 100%; }
+    width: 100%;
+    padding-left: 0; }
+  .text_h1 {
+    height: 240px; }
   h2 {
     font-size: 2em;
     line-height: 1.5em; }
@@ -314,13 +325,13 @@ h1 {
 .form .input {
   /* Pour s'assurer que tous les champs texte ont la même police.
       Par défaut, les textarea ont une police monospace */
-  text-align: center;
   /* Pour que tous les champs texte aient la même dimension */
-  width: 20%;
+  width: 40%;
   height: 3em;
   box-sizing: border-box;
   border-radius: 0.5em;
-  border: #0D1277 solid 3px; }
+  border: #0D1277 solid 3px;
+  padding-left: 2%; }
 
 .form .button {
   margin-top: 0%;
@@ -353,7 +364,7 @@ h1 {
   .form .button {
     width: 40%; }
   .form .input {
-    width: 50%; }
+    width: 80%; }
   .form textarea {
     width: 80%; }
   .success {
@@ -509,13 +520,25 @@ hr {
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 1%; }
 
 .footer div img {
-  width: 80%;
+  width: 40%;
   height: auto;
   cursor: pointer; }
+
+.icone {
+  display: flex;
+  justify-content: center; }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: space-around; }
+  .icone--1 {
+    justify-content: left; }
+  .icone--2 {
+    justify-content: right; } }
 
 * {
   margin: 0;
@@ -548,6 +571,8 @@ body {
   transition: .8s; }
 
 @media (prefers-reduced-motion: reduce) {
+  body {
+    max-width: 100%; }
   .reveal-loaded .reveal [class*="reveal-"] {
     opacity: 1 !important;
     transform: translateY(0) !important; } }

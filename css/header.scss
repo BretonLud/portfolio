@@ -8,7 +8,7 @@ header{
     left: 0;
     @extend %font_OpenSans;
     z-index: 10;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 
@@ -78,7 +78,7 @@ nav > div > ul > li > a{
 }
 
 .logo_img{
-    padding-top: 1%;
+    padding-top: 0.2em;
 }
 
 nav a:hover{
@@ -132,12 +132,14 @@ nav a:hover{
 
     nav ul{
 
-        //on desactive ul enfin de ne le faire apparaitre seulement une fois le check fait
-
-        display: none;
+        display: flex;
         position: absolute;
         width: 80%;     
-        
+        opacity: 0;
+        background-color: $last-Color;
+        flex-direction: column;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
     }
     
     //nav input[type=checkbox]:checked + ul{
@@ -156,7 +158,8 @@ nav a:hover{
 
     nav .menu{
         // on donne au menu la proportion de 80%
-        width: 80%
+        width: 80%;
+        
     }
 
     nav a:hover{

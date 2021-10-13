@@ -74,6 +74,10 @@ p , input{
 
 @media (prefers-reduced-motion: reduce){
 
+  body{
+    max-width: 100%;
+  }
+
   .reveal-loaded .reveal [class*="reveal-"] {
 
     opacity: 1!important;

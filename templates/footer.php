@@ -2,11 +2,11 @@
    <footer class="footer">
         <div>
             <!--Logo github-->
-            <a href="https://github.com/BretonLud" target=_blank rel="noreferrer noopener"> <img src="./css/images/github.png" alt="github" width="80%" height="80%"/> </a>
+            <a href="https://github.com/BretonLud" target=_blank rel="noreferrer noopener" class="icone icone--1"> <img src="./css/images/github.png" alt="github" width="80%" height="80%"/> </a>
         </div>
-        <div>
+        <div >
             <!--Logo linkedin-->
-            <a href="https://www.linkedin.com/in/ludovic-breton/" target=_blank rel="noreferrer noopener"> <img src="./css/images/linkedin.png" alt="linkedin" width="80%" height="80%"/> </a>
+            <a href="https://www.linkedin.com/in/ludovic-breton/" target=_blank rel="noreferrer noopener" class="icone icone--2"> <img src="./css/images/linkedin.png" alt="linkedin" width="80%" height="80%"/> </a>
         </div>   
     </footer>
     <!--Chargement des scripts-->

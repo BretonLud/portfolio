@@ -26,7 +26,7 @@ if (isset($_POST['formcontact'])){
 			<h2 class="reveal-1">Breton Ludovic</h2>
 		</div>
 		<div>
-			<h1 class="reveal-2"></h1>
+			<h1 class="reveal-2 text_h1"></h1>
 		</div>	
 			<div class="typed-text">Développeur web et web mobile</div>				
 	</div>

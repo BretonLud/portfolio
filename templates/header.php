@@ -15,8 +15,8 @@
         <nav>        
             <div class="conteneur_nav">
                 <div class="menu">
-                    <label for="mobile" > <img class="logo_mobile" src="./css/images/logo2.webp" alt="logo" id="logo"></label>
-                    <input type="checkbox" id="mobile" role="button">
+                    <label for="check" id="mobile"> <img class="logo_mobile" src="./css/images/logo2.webp" alt="logo" id="logo"></label>
+                    <input type="checkbox" id="check" role="button">
                     <ul id="menu">
                     <li class="logo_img"> <a href="index.php" class="lien"><img class="logo" src="./css/images/logo2.webp" alt="logo"></a></li>
                         <li> <a href="#presentation" id="1" class="lien">Présentation</a> </li>

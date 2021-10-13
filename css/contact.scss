@@ -52,13 +52,13 @@
   /* Pour s'assurer que tous les champs texte ont la même police.
       Par défaut, les textarea ont une police monospace */
       @extend %font_OpenSans;
-      text-align: center;
       /* Pour que tous les champs texte aient la même dimension */
-      width: 20%;
+      width: 40%;
       height: 3em;
       box-sizing: border-box;
       border-radius: 0.5em;
       border: $main-Color solid 3px;
+      padding-left: 2%;
 }
 
 .form .button{
@@ -120,7 +120,7 @@
 
   .form .input{
 
-    width: 50%
+    width: 80%
   }
   
   .form textarea{
