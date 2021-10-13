@@ -13,22 +13,66 @@ const check = document.getElementById("check")
 const smallScreen = window.matchMedia("(max-width: 768px)").matches;
 var screen = window.innerWidth
 
+  
+
 if (smallScreen) {
+
+    check.checked = false; 
 
     check.addEventListener('click' , function(){
 
-        
+       
 
         if (check.checked == true){
         
-           
+            menu.style.visibility = "visible";
             menu.style.opacity = "1";
-            menu.style.transitionDuration = "1s";
+            menu.style.transitionDuration = "0.5s";
             logo.style.borderBottomLeftRadius = "0";
             logo.style.borderBottomRightRadius = "0";
-            logo.style.transitionDuration = "1s";
+            logo.style.transitionDuration = "0.5s";
             mobile.style.backgroundColor = "white";
-            mobile.style.transitionDuration = "1s"
+            mobile.style.transitionDuration = "0.5s"
+
+            presentation.onclick = function(){
+                menu.style.visibility = "hidden";
+                menu.style.opacity = "0";
+                menu.style.transitionDuration = "0.5s";
+                check.checked = false;
+                logo.style.borderBottomLeftRadius = "1em";
+                logo.style.borderBottomRightRadius = "1em";
+                mobile.style.backgroundColor = "#0D1277";
+            }
+            
+            skills.onclick = function(){
+                menu.style.visibility = "hidden";
+                menu.style.opacity = "0";
+                menu.style.transitionDuration = "0.5s";
+                check.checked = false;
+                logo.style.borderBottomLeftRadius = "1em";
+                logo.style.borderBottomRightRadius = "1em";
+                mobile.style.backgroundColor = "#0D1277";
+            }
+        
+            project.onclick = function(){
+                menu.style.visibility = "hidden";
+                menu.style.opacity = "0";
+                menu.style.transitionDuration = "0.5s";
+                check.checked = false;
+                logo.style.borderBottomLeftRadius = "1em";
+                logo.style.borderBottomRightRadius = "1em";
+                mobile.style.backgroundColor = "#0D1277";
+            }
+        
+            contact.onclick = function(){
+                menu.style.visibility = "hidden";
+                menu.style.opacity = "0";
+                menu.style.transitionDuration = "0.5s";
+                check.checked = false;
+                logo.style.borderBottomLeftRadius = "1em";
+                logo.style.borderBottomRightRadius = "1em";
+                mobile.style.backgroundColor = "#0D1277";
+            }
 
             function reportWindowSize() {
 
@@ -38,9 +82,31 @@ if (smallScreen) {
  
                      menu.style.flexDirection = "row";
                      menu.style.opacity = "1";
+                     menu.style.visibility = "visible";
+
+                     presentation.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                    
+                    skills.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                
+                    project.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                
+                    contact.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
                 } else {
 
                     check.checked = false;
+                    menu.style.visibility = "hidden";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "0s";
                     menu.style.flexDirection = "column";
@@ -55,11 +121,12 @@ if (smallScreen) {
                 
         } else if (check.checked == false) {
 
+            menu.style.visibility = "hidden";
             logo.style.borderBottomLeftRadius = "1em";
             logo.style.borderBottomRightRadius = "1em";
             mobile.style.backgroundColor = "#0D1277";
             menu.style.opacity = "0";
-            menu.style.transitionDuration = "1s";
+            menu.style.transitionDuration = "0.5s";
             
             function reportWindowSize() {
 
@@ -67,9 +134,31 @@ if (smallScreen) {
 
                if (screenObj > 768){
 
+                    menu.style.visibility = "visible";
                     menu.style.opacity = "1";
                     menu.style.flexDirection = "row";
+                    presentation.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                    
+                    skills.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                
+                    project.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                
+                    contact.onclick = function(){
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+
                } else {
+                    menu.style.visibility = "hidden";
                     menu.style.flexDirection = "column";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "0s";
@@ -84,42 +173,6 @@ if (smallScreen) {
 
            
         }
-
-        presentation.onclick = function(){
-            menu.style.opacity = "0";
-            menu.style.transitionDuration = "1s";
-            check.checked = false;
-            logo.style.borderBottomLeftRadius = "1em";
-            logo.style.borderBottomRightRadius = "1em";
-            mobile.style.backgroundColor = "#0D1277";
-        }
-    
-        skills.onclick = function(){
-            menu.style.opacity = "0";
-            menu.style.transitionDuration = "1s";
-            check.checked = false;
-            logo.style.borderBottomLeftRadius = "1em";
-            logo.style.borderBottomRightRadius = "1em";
-            mobile.style.backgroundColor = "#0D1277";
-        }
-    
-        project.onclick = function(){
-            menu.style.opacity = "0";
-            menu.style.transitionDuration = "1s";
-            check.checked = false;
-            logo.style.borderBottomLeftRadius = "1em";
-            logo.style.borderBottomRightRadius = "1em";
-            mobile.style.backgroundColor = "#0D1277";
-        }
-    
-        contact.onclick = function(){
-            menu.style.opacity = "0";
-            menu.style.transitionDuration = "1s";
-            check.checked = false;
-            logo.style.borderBottomLeftRadius = "1em";
-            logo.style.borderBottomRightRadius = "1em";
-            mobile.style.backgroundColor = "#0D1277";
-        }
     })    
 } else {
 
@@ -129,6 +182,7 @@ if (smallScreen) {
         
         if (screenObj <= 768){
 
+            menu.style.visibility ="hidden";
             menu.style.opacity = "0";
             menu.style.transitionDuration = "0s";
             logo.style.borderBottomLeftRadius = "1em";
@@ -147,6 +201,7 @@ if (smallScreen) {
                     menu.style.borderBottomLeftRadius = "1em";
                     menu.style.borderBottomRightRadius = "1em";
                     menu.style.opacity = "1";
+                    menu.style.visibility = "visible";
                     menu.style.transitionDuration = "1s";
                     logo.style.borderBottomLeftRadius = "0";
                     logo.style.borderBottomRightRadius = "0";
@@ -155,7 +210,8 @@ if (smallScreen) {
                     mobile.style.transitionDuration = "1s"
                         
                 } else if (check.checked == false) {
-        
+                
+                    menu.style.visibility = "hidden";
                     menu.style.flexDirection = "column";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "1s";
@@ -166,6 +222,7 @@ if (smallScreen) {
                 }
                 
                 presentation.onclick = function(){
+                    menu.style.visibility = "hidden";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "1s";
                     check.checked = false;
@@ -175,6 +232,7 @@ if (smallScreen) {
                 }
             
                 skills.onclick = function(){
+                    menu.style.visibility = "hidden";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "1s";
                     check.checked = false;
@@ -184,6 +242,7 @@ if (smallScreen) {
                 }
             
                 project.onclick = function(){
+                    menu.style.visibility = "hidden";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "1s";
                     check.checked = false;
@@ -193,6 +252,7 @@ if (smallScreen) {
                 }
             
                 contact.onclick = function(){
+                    menu.style.visibility = "hidden";
                     menu.style.opacity = "0";
                     menu.style.transitionDuration = "1s";
                     check.checked = false;
@@ -202,14 +262,40 @@ if (smallScreen) {
                 }
             })    
         
-        } else {
+        } else if (screenObj > 768) {
+        
             check.checked = false;
             menu.style.flexDirection = "row";
             menu.style.opacity = "1";
+            menu.style.visibility = "visible";
             
+              
+                presentation.onclick = function(){
+                    menu.style.opacity = "1";
+                    menu.style.visibility = "visible";
+                    
+                }
+            
+                skills.onclick = function(){
+                    menu.style.opacity = "1";
+                    menu.style.visibility = "visible";
+                    
+                }
+            
+                project.onclick = function(){
+                    menu.style.opacity = "1";
+                    menu.style.visibility = "visible";
+                }
+            
+                contact.onclick = function(){
+                    menu.style.opacity = "1";
+                    menu.style.visibility = "visible";
+                }
+        
         }
 
     }    
 
     window.onresize = reportWindowSize;
 }
+

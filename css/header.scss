@@ -140,6 +140,7 @@ nav a:hover{
         flex-direction: column;
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1em;
+        visibility: hidden;
     }
     
     //nav input[type=checkbox]:checked + ul{
@@ -159,7 +160,7 @@ nav a:hover{
     nav .menu{
         // on donne au menu la proportion de 80%
         width: 80%;
-        
+    
     }
 
     nav a:hover{

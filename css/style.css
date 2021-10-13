@@ -137,7 +137,8 @@ nav a:hover {
     background-color: #FFF;
     flex-direction: column;
     border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em; }
+    border-bottom-right-radius: 1em;
+    visibility: hidden; }
   /*on flex ce qu'il y dans le ul et on met en colonne et
         change les couleurs ainsi qu'un border radius sur les angles inférieur*/
   /*  display: flex;
