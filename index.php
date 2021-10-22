@@ -1,21 +1,3 @@
-<?php 
-
-require './mysql/contact.php';
-require './mysql/mail.php';
-
-// récupération des données pour envoyer le mail et enregistrer dans la base donnée.
-if (isset($_POST['formcontact'])){
-
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-	$objet = $_POST["objet"];
-	$contact = (new Contact($name, $email, $message, $objet))->newContact($name, $email, $message, $objet);
-	//Contact::add(new Contact($name, $email, $message, $objet));
-	$mail = (new Mail())->newMail($name, $email, $message, $objet);    	
-}  
-    
-?>
 
 <?php require './templates/header.php' ?>
 
@@ -58,6 +40,7 @@ if (isset($_POST['formcontact'])){
 			<div class="front reveal-3">
 				<div class="logo_Front-end">
 					<img src="./css/images/php.png" alt="logo php" width="96px" height="96px">
+                    <img class="logo_CSS" src="./css/images/symfony.png" alt="logo css" width="96px" height="96px">
 				</div>
 				<div>
 					<img src="./css/images/mysql.png" alt="logo mysql" width="96px" height="96px">
@@ -179,49 +162,25 @@ if (isset($_POST['formcontact'])){
 
 <section id="contact" class="contact reveal">
 	<h1>Contact</h1>		
-		<form class="form" method="post" action="index.php#contact">
-			<div class="error">
-			<?php
-			// affiche le message d'erreur
+		<form class="form" id="myform" method="post" action="../portfolio/mysql/mailContact.php">
 
-				if(isset($_GET['reg_err']))
-				{
-					$err = htmlspecialchars($_GET['reg_err']);
+            <div class="response">
 
-					switch($err)
-					{
-						case 'success':
-						?>	
-						<div class="success">							
-							<p>Mail envoyé !<p>
-						</div>
-						<?php
-						break;
-
-						case 'fail':
-						?>							
-						<div class="err">							
-							<p>Mail non envoyé !<p>
-						</div>						
-						<?php
-					}
-				}
-			?>
-			</div>
+            </div>
 			<div>		
-				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required pattern="^[A-Za-z \']+$" maxlength="50">		
+				<input type='text' id='name' name='name' class="input reveal-1" placeholder='Votre nom' required  maxlength="50">
 			</div>
 			<div>
-				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' maxlength="50">			
+				<input type='email' id='email' name='email' class="input reveal-2" placeholder='Votre adresse mail' required  maxlength="50">
 			</div>
 			<div>
-				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required pattern='^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-Z]{2,}$' maxlength="100">			
+				<input type='text' id='objet' name='objet' class="input reveal-3" placeholder='La raison du contact' required  maxlength="100">
 			</div>
 			<div>
 				<textarea id="message" class="reveal-4" name="message" placeholder="Veuillez écrire ici votre message, 2000 caractères maximum" maxlength="2000" required></textarea>
 			</div>
 			<div id="submit">
-				<input type="submit" value="Envoyer" class="button" name="formcontact">
+				<input id="btn" type="submit" value="Envoyer" class="button" name="formContact">
 			</div>
 		</form>	
 </section>

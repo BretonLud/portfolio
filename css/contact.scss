@@ -71,7 +71,7 @@
     padding-top: 5px;
 }
 
-.error{
+.response{
   // on centre le message d'erreur
   display: flex;
   justify-content: center;
@@ -82,10 +82,11 @@
   // si le mail est envoyé la box apparait avec le message en vert
 
   color: green;
-  width: 20%; 
+  width: 38.75%;
   background: $main-Color;
-  border-radius: 1em;
+  border-radius: 0.5em;
   font-size: 1.5em;
+  padding: 0.5rem 0;
 } 
 
 .err{
@@ -93,10 +94,11 @@
   // si le mail n'est pas envoye la box apparait avec le message en rouge
 
   color: red;
-  width: 20%; 
+  width: 40%;
   background: $main-Color;
-  border-radius: 1em;
+  border-radius: 0.5em;
   font-size: 1.5em;
+  padding: 0.5rem 0;
 }
 
   .form .button:hover{

@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/ajax.js":
+/*!*********************!*\
+  !*** ./src/ajax.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ajax */ \"./src/ajax.js\");\n\nwindow.addEventListener('load', function () {\n  var btn = document.querySelector(\"#btn\");\n  btn.addEventListener('click', sendData);\n});\n\nfunction sendData() {\n  event.preventDefault();\n  var form = document.querySelector('#myform');\n  var data = new FormData(form);\n  var response = document.querySelector('.response');\n  var mail = document.querySelector(\"#email\");\n  var name = document.querySelector(\"#name\");\n  var objet = document.querySelector(\"#objet\");\n  var message = document.querySelector(\"#message\");\n\n  if (mail.validity.valid && name.validity.valid && objet.validity.valid && message.validity.valid) {\n    var text = message.value;\n    var regex = new RegExp('<\\/?(.|\\s|\\S)*?>');\n    var pseudo = name.value;\n    var subject = objet.value;\n\n    if (regex.test(text) === false && regex.test(pseudo) === false && regex.test(subject) === false) {\n      var httpRequest = new XMLHttpRequest();\n      httpRequest.open('POST', \"mysql/mailContact.php\");\n      httpRequest.send(data);\n\n      httpRequest.onreadystatechange = function () {\n        if (httpRequest.readyState === 4 && httpRequest.status === 200) {\n          console.log(httpRequest.response);\n          var obj = JSON.parse(httpRequest.response);\n          response.innerHTML = '<div class=\"' + obj.Response + '\">' + obj.Message + '</div>';\n          response.classList.add(\"open\");\n          response.addEventListener('click', function (e) {\n            this.innerHTML = \"\";\n            form.reset();\n          });\n        } else {\n          response.innerHTML = \"<div class='err'>Impossible d'envoyer le mail</div>\";\n        }\n      };\n    } else {\n      response.innerHTML = \"<div class='err'>Les balises ne sont pas autorisées</div>\";\n    }\n  } else {\n    response.innerHTML = \"<div class='err'>Merci de remplir les champs</div>\";\n  }\n}\n\n//# sourceURL=webpack://portfolio/./src/ajax.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -16,7 +27,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ \"./css/style.scss\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ \"./src/modal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reveal */ \"./src/reveal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reveal__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ \"./css/style.scss\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ \"./src/modal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reveal */ \"./src/reveal.js\");\n/* harmony import */ var _reveal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reveal__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _ajax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ajax */ \"./src/ajax.js\");\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./src/index.js?");
 
 /***/ }),
 

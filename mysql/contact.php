@@ -20,20 +20,22 @@ class Contact {
             && !empty($message)
             && !empty($email)
             && filter_var($email, FILTER_VALIDATE_EMAIL)){
-        
-            
+
+            if(preg_match('<\/?(.|\s|\S)*?>', $objet) === false && preg_match('<\/?(.|\s|\S)*?>', $message) === false
+                && preg_match('<\/?(.|\s|\S)*?>', $name) === false ) {
+
                 //On se connecte à la BDD
                 $dbh = (new Connexion)->connect();
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 //On insère les données reçues
                 $sth = $dbh->prepare("INSERT INTO contact(nom, email, message, objet)
                     VALUES(:name, :email, :message, :objet)");
-                $sth->bindParam(':name',$name);
-                $sth->bindParam(':email',$email);
-                $sth->bindParam(':message',$message);
-                $sth->bindParam(':objet', $objet);            
-                $sth->execute();               
-            
+                $sth->bindParam(':name', $name);
+                $sth->bindParam(':email', $email);
+                $sth->bindParam(':message', $message);
+                $sth->bindParam(':objet', $objet);
+                $sth->execute();
+            }
         }
     }
 }

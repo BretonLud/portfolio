@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.26, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: portfolio
+-- Host: 127.0.0.1    Database: portfolio2
 -- ------------------------------------------------------
 -- Server version	8.0.26-0ubuntu0.20.04.2
 
@@ -20,6 +20,8 @@
 --
 CREATE Database `portfolio`;
 
+USE 'portfolio';
+
 DROP TABLE IF EXISTS `contact`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -38,7 +40,7 @@ CREATE TABLE `contact` (
 --
 
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
-INSERT INTO `contact` VALUES (9,'test','test@hotmail.fr','test réussi ?','Ceci est un test'),(10,'test','test@hotmail.fr','test réussi ?','Ceci est un test');
+
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

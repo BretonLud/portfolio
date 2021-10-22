@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Breton Ludovic, Développeur Web FullStack">
     <link rel="icon" type="image/png" sizes="32x32" href="./css/images/logo-32x32.png">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../portfolio/css/style.css">
     <title>Breton Ludovic</title>
 </head>
 <body id="mastercontainer">

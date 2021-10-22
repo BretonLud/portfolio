@@ -13,6 +13,6 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./lib/typed/typed.min.js"></script>
     <script src="./src/typed.js"></script>
-    <script src="./dist/main.js"></script>   
+    <script src="./dist/main.js"></script>
 </body>
 </html>
