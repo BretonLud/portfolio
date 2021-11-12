@@ -32,14 +32,14 @@ function sendData(){
             httpRequest.onreadystatechange = function () {
 
                 if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-                    console.log(httpRequest.response)
+
                     let obj = JSON.parse(httpRequest.response);
-                    response.innerHTML = '<div class="' + obj.Response + '">' + obj.Message + '</div>';
-                    response.classList.add("open");
-                    response.addEventListener('click', function (e) {
-                        this.innerHTML = "";
-                        form.reset();
-                    })
+                    response.innerHTML = '<div id="resultat" class="' + obj.Response + '">' + obj.Message + '</div>';
+                    response.classList.add("open")
+                    let result = document.querySelector('#resultat')
+                    if (result.classList.contains('success') ) {
+                        setTimeout(function(){form.reset();},3000);
+                    }
                 } else {
                     response.innerHTML="<div class='err'>Impossible d'envoyer le mail</div>"
                 }
